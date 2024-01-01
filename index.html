@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>My Weather App</title>
+    <link rel='stylesheet' href="assets/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class='snippet-body' id="body">
+    <div id="preloader">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+    </div>
+    <div class="container-fluid main-container px-1 px-sm-3 py-5 mx-auto">
+        <div class="row d-flex justify-content-center">
+            <div class="row card0 px-0">
+                <div class="card1 col-lg-8 col-md-7">
+                    <div class="d-flex flex-row justify-content-between align-items-center">
+                        <small class="title">Nouman Akbar</small>
+                        <small id="date"></small>
+                    </div>
+                    <div class="text-center">
+                        <img class="image mt-5" src="assets/images/balloon.png" alt="Weather Background" loading="lazy">
+                    </div>
+                    <div class="row px-3 flex-lg-nowrap">
+                        <div class=" d-flex w-auto flex-column">
+                            <h1 class="large-font mr-1 mb-0 reset" id="temp_c"></h1>
+                            <p class="small-font mr-1 mb-0 reset" id="feelslike_c"></p>
+                        </div>
+                        <div class="d-flex w-auto flex-column">
+                            <div class="d-flex flex-row mr-2 mt-2">
+                                <h2 class="mt-3 mb-1 reset" id="name"></h2>
+                                <small id="region" class="reset pt-4 mt-1"></small>
+                            </div>
+                            <div class="pt-0">
+                                <p class="d-lex flex-column reset" id="condition"></p>
+                            </div>
+
+                        </div>
+                        <div class="d-flex w-auto flex-column text-center">
+                        </div>
+                    </div>
+                </div>
+                <div class="card2 col-lg-4 col-md-5">
+                    <div class="row px-3">
+                        <input id="search" type="text" name="location" class="col-10 px-0 mb-3"
+                            placeholder="Search location" required>
+                        <div class="search_btn mb-3 text-center col-2 d-flex justify-content-center align-items-center"
+                            onclick="
+                        findWeather()">
+                            <img src="assets/images/search_icon.png" alt="Search_icon">
+                        </div>
+                    </div>
+                    <div class="mr-5">
+                        <p>Weather Details</p>
+                        <div class="row px-3">
+                            <p class="light-text col-8">Cloudy</p>
+                            <p class="col-4 text-center" id="cloud">0%</p>
+                        </div>
+                        <div class="row px-3">
+                            <p class="light-text col-8">Humidity</p>
+                            <p class="col-4 text-center" id="humidity">0%</p>
+                        </div>
+                        <div class="row px-3">
+                            <p class="light-text col-8">Wind</p>
+                            <p class="col-4 text-center" id="wind_kph">0km/h NE</p>
+                        </div>
+                        <div class="row px-3">
+                            <p class="light-text col-8">Wind Gusts</p>
+                            <p class="col-4 text-center" id="gust_kph">0 Km/h</p>
+                        </div>
+                        <div class="row px-3">
+                            <p class="light-text col-8">Precipitation</p>
+                            <p class="col-4 text-center" id="precip_mm">0mm</p>
+                        </div>
+                        <div class="row px-3">
+                            <p class="light-text col-8">Pressure</p>
+                            <p class="col-4 text-center" id="pressure_mb">0.0mb</p>
+                        </div>
+
+                        <div class="row px-3">
+                            <p class="light-text col-8">Visibility</p>
+                            <p class="col-4 text-center" id="vis_km">0Km</p>
+                        </div>
+                        <div class="row px-3">
+                            <p class="light-text col-8">UV Radiation</p>
+                            <p class="col-4 text-center" id="uv">0mm</p>
+                        </div>
+                        <div class="line mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/setdates.js"></script>
+</body>
+
+</html>
