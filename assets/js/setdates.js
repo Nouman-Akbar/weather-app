@@ -25,4 +25,4 @@ switch (day) {
     case 5: day = "Friday"; break;
     case 6: day = "Saturday"; break;
 }
-document.getElementById('date').innerHTML = date.getHours() + `:` + date.getMinutes() + ` - ` + day + `&nbsp;` + date.getDate() + `&nbsp;` + month + `&nbsp` + date.getFullYear();
+document.getElementById('date').innerHTML = date.getHours() + `:` + date.getMinutes() + ` - ` + day + ` ` + date.getDate() + `&nbsp;` + month + `&nbsp` + date.getFullYear();
